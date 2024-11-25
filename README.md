@@ -1,3 +1,9 @@
+> ***Note**: We have added some files based on this project to improve usability.*
+
+- ACDC.py: Provide the ACDC submodule image to acdc pipeline.
+- install.md: More detailed installation process based on the original project.
+- \_\_init\_\_.py: Define the interface that the submodule can call.
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
 
@@ -68,27 +74,27 @@ conda activate acdc
 3. Install the following key dependencies used in our pipeline. **NOTE**: Make sure to install in the exact following order:
 
     - Make sure we're in dependencies directory
-   
+
         ```bash
         mkdir -p deps && cd deps
         ```
 
     - [dinov2](https://github.com/facebookresearch/dinov2)
-   
+
         ```bash
         git clone https://github.com/facebookresearch/dinov2.git && cd dinov2
         conda-develop . && cd ..      # Note: Do NOT run 'pip install -r requirements.txt'!!
         ```
-    
+
     - [segment-anything-2](https://github.com/facebookresearch/segment-anything-2)
-   
+
         ```bash
         git clone https://github.com/facebookresearch/segment-anything-2.git && cd segment-anything-2
         pip install -e . && cd ..
         ```
-    
+
     - [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO)
-   
+
         ```bash
         git clone https://github.com/IDEA-Research/GroundingDINO.git && cd GroundingDINO
         export CUDA_HOME=/PATH/TO/cuda-12.3   # Make sure to set this!
@@ -96,41 +102,41 @@ conda activate acdc
         ```
 
     - [PerspectiveFields](https://github.com/jinlinyi/PerspectiveFields)
-   
+
         ```bash
         git clone https://github.com/jinlinyi/PerspectiveFields.git && cd PerspectiveFields
         pip install -e . && cd ..
         ```
 
     - [Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2)
-   
+
         ```bash
         git clone https://github.com/DepthAnything/Depth-Anything-V2.git && cd DepthAnything-V2
         pip install -r requirements.txt
         conda-develop . && cd ..
         ```
-      
+
     - [CLIP](https://github.com/openai/CLIP)
-   
+
         ```bash
         pip install git+https://github.com/openai/CLIP.git
         ```
-      
+
     - [faiss-gpu](https://github.com/facebookresearch/faiss/tree/main)
-   
+
         ```bash
         conda install -c pytorch -c nvidia faiss-gpu=1.8.0
         ```
 
     - [robomimic](https://github.com/ARISE-Initiative/robomimic)
-   
+
         ```bash
         git clone https://github.com/ARISE-Initiative/robomimic.git --branch diffusion-updated --single-branch && cd robomimic
         pip install -e . && cd ..
         ```
-    
+
     - [OmniGibson](https://github.com/StanfordVL/OmniGibson)
-   
+
         ```bash
         git clone https://github.com/StanfordVL/OmniGibson.git && cd OmniGibson
         pip install -e . && python -m omnigibson.install --no-install-datasets && cd ..

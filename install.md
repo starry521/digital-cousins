@@ -1,9 +1,6 @@
 # Installation of ACDC
 
->  [!note]
->
-> We provide a more detailed installation process based on the official guide, along with a summary of the issues we encountered during our own installation process.
-
+> ***Note**: We provide a more detailed installation process based on the official guide, along with a summary of the issues we encountered during our own installation process.*
 
 The official documentation provides two installation methods: the first is a one-step installation using the `install.sh` script, and the second is a step-by-step manual installation. When using the script, ensure that your network connection is stable and provide a CUDA path with a version of 12.1 or higher. If, like me, you installed the CUDA driver via Ubuntu's package manager, you might not be able to locate the CUDA path. In that case, I recommend opting for the step-by-step installation method.
 
